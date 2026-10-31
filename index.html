@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minimal — Simple apps, beautifully made</title>
+<meta name="description" content="Minimal builds beautiful, focused apps. Meet Minimal Clock and more.">
+<meta name="theme-color" content="#0a0b14">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%23101223'/><circle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='2.5'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SVG refraction filter for the liquid-glass edge distortion (Chromium); other browsers fall back to blur -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="liquid" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+    <feGaussianBlur in="noise" stdDeviation="3" result="soft"/>
+    <feDisplacementMap in="SourceGraphic" in2="soft" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<div class="bg" aria-hidden="true">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+  <span class="blob b4"></span>
+  <span class="grain"></span>
+</div>
+
+<header class="nav glass">
+  <a class="logo" href="#top" aria-label="Minimal home"><i class="dot"></i>minimal</a>
+  <nav>
+    <a href="#apps">Apps</a>
+    <a href="#clock">Minimal Clock</a>
+    <a href="#about">About</a>
+    <a href="#connect">Connect</a>
+  </nav>
+  <a class="btn small" href="#clock">Get Clock</a>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow glass">✦ A tech brand building calmer software</p>
+    <h1>Less noise.<br><span class="grad">More minimal.</span></h1>
+    <p class="lead">We make focused, beautifully crafted apps that do one thing well — starting with <strong>Minimal Clock</strong>.</p>
+    <div class="cta">
+      <a class="btn" href="#clock">Meet Minimal Clock</a>
+      <a class="btn ghost glass" href="#apps">Explore apps</a>
+    </div>
+
+    <div class="clock-card glass tilt" aria-label="Live clock preview">
+      <div class="ring"></div>
+      <time id="time">00:00</time>
+      <span id="date">—</span>
+    </div>
+  </section>
+
+  <section id="apps" class="section">
+    <h2>Our apps</h2>
+    <p class="sub">A growing family of small apps. Each one fast, private, and a pleasure to use.</p>
+    <div class="grid">
+      <article class="card glass tilt featured">
+        <div class="icon">🕐</div>
+        <h3>Minimal Clock</h3>
+        <p>A distraction-free clock with elegant faces, timers and alarms.</p>
+        <a href="#clock">Learn more →</a>
+      </article>
+      <article class="card glass tilt">
+        <div class="icon">✅</div>
+        <h3>Minimal Tasks</h3>
+        <p>A tiny to-do list that stays out of your way.</p>
+        <span class="tag">Coming soon</span>
+      </article>
+      <article class="card glass tilt">
+        <div class="icon">📝</div>
+        <h3>Minimal Notes</h3>
+        <p>Write quickly. Find instantly. Nothing extra.</p>
+        <span class="tag">Coming soon</span>
+      </article>
+      <article class="card glass tilt">
+        <div class="icon">🌤️</div>
+        <h3>Minimal Weather</h3>
+        <p>The forecast at a glance, without the clutter.</p>
+        <span class="tag">Coming soon</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="clock" class="section spotlight glass">
+    <div class="spot-text">
+      <p class="eyebrow">Flagship app</p>
+      <h2>Minimal Clock</h2>
+      <p>Time, reimagined. Minimal Clock strips away everything unnecessary and leaves a beautiful, glanceable clock that feels at home on any screen.</p>
+      <ul class="ticks">
+        <li>Gorgeous, customizable clock faces</li>
+        <li>Timers, alarms &amp; stopwatch</li>
+        <li>Dark, light &amp; ambient themes</li>
+        <li>No ads. No clutter. No tracking.</li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="#connect">Get updates</a>
+      </div>
+    </div>
+    <div class="spot-visual">
+      <div class="phone glass">
+        <div class="phone-time" id="time2">00:00</div>
+        <div class="phone-sub">Minimal Clock</div>
+        <div class="analog"><i class="h" id="hh"></i><i class="m" id="mm"></i><i class="s" id="ss"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>Built on a simple idea</h2>
+    <div class="grid three">
+      <div class="card glass"><h3>Focused</h3><p>Every app has a single, clear purpose.</p></div>
+      <div class="card glass"><h3>Beautiful</h3><p>Thoughtful design down to the last pixel.</p></div>
+      <div class="card glass"><h3>Private</h3><p>Your data is yours. We keep it that way.</p></div>
+    </div>
+  </section>
+
+  <section id="connect" class="section connect glass">
+    <h2>Follow along</h2>
+    <p class="sub">Updates, sneak peeks and new releases land on our socials first.</p>
+    <div class="socials">
+      <a class="social glass" href="https://instagram.com/LetsGoMinimal" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+        <span><b>Instagram</b><small>@LetsGoMinimal</small></span>
+      </a>
+      <a class="social glass" href="https://x.com/Go_Minimal" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>
+        <span><b>X</b><small>@Go_Minimal</small></span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><i class="dot"></i> minimal · © <span id="yr"></span> Minimal. All rights reserved.</p>
+  <p class="links"><a href="https://instagram.com/LetsGoMinimal" target="_blank" rel="noopener">Instagram</a> · <a href="https://x.com/Go_Minimal" target="_blank" rel="noopener">X</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
