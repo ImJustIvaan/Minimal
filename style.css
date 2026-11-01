@@ -194,3 +194,4 @@ footer a:hover{color:var(--text)}
 .btn.ghost{background:rgba(255,255,255,.35)}
 .analog{background:rgba(255,255,255,.3);backdrop-filter:blur(6px)}
 body{background:transparent}
+.hero h1{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.02em;line-height:1;font-size:clamp(3.2rem,9.5vw,6.8rem)}
