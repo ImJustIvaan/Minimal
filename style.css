@@ -254,3 +254,12 @@ footer{display:block;max-width:1100px;margin:110px auto 0;padding:48px 20px 36px
 .status .sig{display:flex;align-items:center;gap:5px;color:#111214}
 .status .sig b{font-size:.7rem;font-weight:700;letter-spacing:-.01em}
 .status .sig .bars rect{fill:currentColor}
+
+/* readability: soften background shapes, firmer text contrast */
+:root{--muted:#555963}
+.orb{opacity:.4;filter:blur(1.5px)}
+@media (max-width:760px){
+  .orb.o1{width:170px;height:170px;left:-60px}
+  .orb.o2{width:130px;height:130px;right:-40px}
+  .orb{opacity:.3}
+}
