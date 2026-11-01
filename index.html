@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Minimal — Simple apps, beautifully made</title>
+<title>Minimal — Simple apps, made well</title>
 <meta name="description" content="Minimal builds beautiful, focused apps. Meet Minimal Clock and more.">
 <meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Minimal — Simple apps, made well">
+<meta property="og:description" content="Minimal is a small tech brand making focused apps. Meet Minimal Clock.">
+<meta property="og:image" content="logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Go_Minimal">
 <link rel="icon" href="logo.png" type="image/png">
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +52,6 @@
 <main id="top">
 
   <section class="hero">
-    <p class="eyebrow glass">Apps by Minimal</p>
     <h1>Simple apps,<br>made well.</h1>
     <p class="lead">Minimal is a small tech brand making apps that do one thing properly. Our first is <strong>Minimal Clock</strong>.</p>
     <div class="cta">
@@ -62,8 +67,9 @@
   </section>
 
   <section id="apps" class="section">
+    <p class="kicker">Products</p>
     <h2>Our apps</h2>
-    <p class="sub">A few small apps, each fast and private.</p>
+    <p class="sub">A small, growing family of apps, each built to do one job well.</p>
     <div class="grid">
       <article class="card glass tilt featured">
         <img class="icon-img" src="logo.png" alt="">
@@ -82,7 +88,7 @@
 
   <section id="clock" class="section spotlight glass">
     <div class="spot-text">
-      <p class="eyebrow">Flagship app</p>
+      <p class="kicker">Flagship app</p>
       <h2>Minimal Clock</h2>
       <p>A clean, glanceable clock with nothing extra on screen.</p>
       <ul class="ticks">
@@ -105,15 +111,17 @@
   </section>
 
   <section id="about" class="section">
-    <h2>How we work</h2>
+    <p class="kicker">Principles</p>
+    <h2>How we build</h2>
     <div class="grid three">
-      <div class="card glass"><h3>Focused</h3><p>Every app has a single, clear purpose.</p></div>
-      <div class="card glass"><h3>Beautiful</h3><p>Careful design, no clutter.</p></div>
-      <div class="card glass"><h3>Private</h3><p>Your data is yours. We keep it that way.</p></div>
+      <div class="card glass"><span class="num">01</span><h3>Focused</h3><p>Every app has a single, clear purpose, and nothing that gets in its way.</p></div>
+      <div class="card glass"><span class="num">02</span><h3>Considered</h3><p>Careful typography, spacing and motion, down to the last detail.</p></div>
+      <div class="card glass"><span class="num">03</span><h3>Private</h3><p>No ads and no tracking. Your data is yours.</p></div>
     </div>
   </section>
 
   <section id="connect" class="section connect glass">
+    <p class="kicker">Community</p>
     <h2>Follow along</h2>
     <p class="sub">News and releases show up here first.</p>
     <div class="socials">
@@ -130,8 +138,23 @@
 </main>
 
 <footer>
-  <p><img src="logo.png" alt="" class="logo-img sm"> Minimal · © <span id="yr"></span> Minimal. All rights reserved.</p>
-  <p class="links"><a href="https://instagram.com/LetsGoMinimal" target="_blank" rel="noopener">Instagram</a> · <a href="https://x.com/Go_Minimal" target="_blank" rel="noopener">X</a></p>
+  <div class="foot">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><img src="logo.png" alt="" class="logo-img">Minimal</a>
+      <p>Simple apps, made well.</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <a href="https://time.ivaan.cc" target="_blank" rel="noopener">Minimal Clock</a>
+      <span class="soon">Minimal Mail <em>soon</em></span>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <a href="https://instagram.com/LetsGoMinimal" target="_blank" rel="noopener">Instagram · @LetsGoMinimal</a>
+      <a href="https://x.com/Go_Minimal" target="_blank" rel="noopener">X · @Go_Minimal</a>
+    </div>
+  </div>
+  <p class="copy">© <span id="yr"></span> Minimal. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
