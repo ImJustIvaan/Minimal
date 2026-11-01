@@ -9,7 +9,6 @@
     $("time").textContent = t;
     $("date").textContent = d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" });
     const h12 = d.getHours() % 12 || 12;
-    $("sbTime").textContent = `${h12}:${pad(d.getMinutes())}`;
     $("time2").textContent = `${pad(h12)}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
     $("ampm").textContent = d.getHours() < 12 ? "AM" : "PM";
     $("day").textContent = d.toLocaleDateString("en-US", { weekday: "long" }).toUpperCase();
