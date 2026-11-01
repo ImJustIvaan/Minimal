@@ -7,12 +7,13 @@
     const d = new Date();
     const t = `${pad(d.getHours())}:${pad(d.getMinutes())}`;
     $("time").textContent = t;
-    $("time2").textContent = t;
     $("date").textContent = d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" });
-    const s = d.getSeconds(), m = d.getMinutes() + s / 60, h = (d.getHours() % 12) + m / 60;
-    $("ss").style.transform = `rotate(${s * 6}deg)`;
-    $("mm").style.transform = `rotate(${m * 6}deg)`;
-    $("hh").style.transform = `rotate(${h * 30}deg)`;
+    const h12 = d.getHours() % 12 || 12;
+    $("sbTime").textContent = `${h12}:${pad(d.getMinutes())}`;
+    $("time2").textContent = `${pad(h12)}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    $("ampm").textContent = d.getHours() < 12 ? "AM" : "PM";
+    $("day").textContent = d.toLocaleDateString("en-US", { weekday: "long" }).toUpperCase();
+    $("fdate").textContent = d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   }
   tick();
   setInterval(tick, 1000);
